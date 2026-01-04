@@ -1,3 +1,43 @@
+const aiCommand = {
+    description: 'IA aplicada a programación, gestión y criterio de uso',
+    output: (
+        <div className="output-section">
+            <div className="skills-category">
+                <strong>[IA aplicada a programación y sistemas]</strong>
+                <span>Apoyo en desarrollo en Python (scripts, automatizaciones, consumo de APIs)</span>
+                <span>Generación y validación de código para Odoo (lógica, modelos, integraciones)</span>
+                <span>Análisis de errores, refactorización y mejora de código existente</span>
+                <span>Documentación técnica clara y mantenible</span>
+            </div>
+
+            <div className="terminal-note" style={{ marginTop: '12px' }}>
+                La IA acelera mi trabajo, pero la decisión final y la responsabilidad son siempre humanas.
+            </div>
+
+            <br />
+
+            <div className="skills-category">
+                <strong>[IA aplicada a gestión y trabajo diario]</strong>
+                <span>Síntesis de información compleja para toma de decisiones</span>
+                <span>Apoyo en redacción de documentación funcional y técnica</span>
+                <span>Preparación de presentaciones ejecutivas y materiales de formación</span>
+                <span>Análisis de procesos y propuestas de mejora operativa</span>
+                <span>Organización de tareas, priorización y planificación</span>
+            </div>
+
+            <br />
+
+            <div className="skills-category">
+                <strong>[Cómo la uso (mi criterio)]</strong>
+                <span>Como copiloto, no como sustituto</span>
+                <span>Para ganar velocidad sin perder control</span>
+                <span>Para reducir fricción, no para añadir complejidad</span>
+                <span>Siempre con revisión y validación propia</span>
+            </div>
+        </div>
+    )
+};
+
 export const commands = {
     help: {
         description: 'Listar todos los comandos disponibles',
@@ -72,45 +112,8 @@ export const commands = {
             </div>
         )
     },
-    'pablo --ai': {
-        description: 'IA aplicada a programación, gestión y criterio de uso',
-        output: (
-            <div className="output-section">
-                <div className="skills-category">
-                    <strong>[IA aplicada a programación y sistemas]</strong>
-                    <span>Apoyo en desarrollo en Python (scripts, automatizaciones, consumo de APIs)</span>
-                    <span>Generación y validación de código para Odoo (lógica, modelos, integraciones)</span>
-                    <span>Análisis de errores, refactorización y mejora de código existente</span>
-                    <span>Documentación técnica clara y mantenible</span>
-                </div>
-
-                <div className="terminal-note" style={{ marginTop: '12px' }}>
-                    La IA acelera mi trabajo, pero la decisión final y la responsabilidad son siempre humanas.
-                </div>
-
-                <br />
-
-                <div className="skills-category">
-                    <strong>[IA aplicada a gestión y trabajo diario]</strong>
-                    <span>Síntesis de información compleja para toma de decisiones</span>
-                    <span>Apoyo en redacción de documentación funcional y técnica</span>
-                    <span>Preparación de presentaciones ejecutivas y materiales de formación</span>
-                    <span>Análisis de procesos y propuestas de mejora operativa</span>
-                    <span>Organización de tareas, priorización y planificación</span>
-                </div>
-
-                <br />
-
-                <div className="skills-category">
-                    <strong>[Cómo la uso (mi criterio)]</strong>
-                    <span>Como copiloto, no como sustituto</span>
-                    <span>Para ganar velocidad sin perder control</span>
-                    <span>Para reducir fricción, no para añadir complejidad</span>
-                    <span>Siempre con revisión y validación propia</span>
-                </div>
-            </div>
-        )
-    },
+    'pablo --ai': aiCommand,
+    'pablo --ia': aiCommand,
     'pablo --contact': {
         description: 'Información de contacto',
         output: (

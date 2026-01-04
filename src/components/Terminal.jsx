@@ -19,7 +19,7 @@ const Terminal = () => {
     }, [history]);
 
     const handleCommand = (cmd) => {
-        const trimmedCmd = cmd.trim();
+        const trimmedCmd = cmd.trim().toLowerCase();
         const newHistory = [...history, { type: 'input', content: cmd }];
 
         if (!trimmedCmd) {
@@ -27,7 +27,7 @@ const Terminal = () => {
             return;
         }
 
-        setCmdHistory(prev => [trimmedCmd, ...prev]);
+        setCmdHistory(prev => [cmd, ...prev]); // Keep original casing in history
         setHistoryIndex(-1);
 
         if (trimmedCmd === 'clear') {
@@ -70,8 +70,9 @@ const Terminal = () => {
             }
         } else if (e.key === 'Tab') {
             e.preventDefault();
+            const lowerInput = input.toLowerCase();
             const availableCommands = Object.keys(commands);
-            const match = availableCommands.find(c => c.startsWith(input));
+            const match = availableCommands.find(c => c.toLowerCase().startsWith(lowerInput));
             if (match) {
                 setInput(match);
             }
