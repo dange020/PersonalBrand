@@ -1,0 +1,134 @@
+.terminal-window {
+    background-color: var(--terminal-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 8px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    width: 100%;
+    max-width: 900px;
+    /* Constrain width for cleaner look */
+    margin: 2rem auto;
+    overflow: hidden;
+    font-family: var(--font-mono);
+    display: flex;
+    flex-direction: column;
+}
+
+.terminal-header {
+    background-color: #0d1117;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid var(--border-color);
+    position: relative;
+}
+
+.window-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.btn {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.btn.close {
+    background-color: #ff5f56;
+}
+
+.btn.minimize {
+    background-color: #ffbd2e;
+}
+
+.btn.maximize {
+    background-color: #27c93f;
+}
+
+.window-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    color: var(--text-muted);
+    font-size: 0.8rem;
+    pointer-events: none;
+}
+
+.terminal-body {
+    padding: 20px;
+    height: 500px;
+    overflow-y: auto;
+    color: var(--text-color);
+}
+
+.input-line {
+    display: flex;
+    align-items: center;
+    margin-bottom: 5px;
+}
+
+.prompt {
+    color: var(--accent-color);
+    margin-right: 10px;
+    font-weight: 600;
+}
+
+.input-line input {
+    background: transparent;
+    border: none;
+    color: var(--text-color);
+    font-family: var(--font-mono);
+    font-size: 1rem;
+    flex: 1;
+    outline: none;
+    caret-color: var(--accent-secondary);
+}
+
+.history-entry {
+    margin-bottom: 5px;
+    line-height: 1.5;
+}
+
+.history-entry.error {
+    color: #ff6b6b;
+}
+
+.highlight {
+    color: var(--accent-secondary);
+}
+
+.cmd-item {
+    margin-bottom: 5px;
+}
+
+.cmd-item span {
+    color: var(--accent-color);
+    font-weight: bold;
+}
+
+.skills-category {
+    margin-bottom: 1rem;
+}
+
+.skills-category strong {
+    display: block;
+    margin-bottom: 0.5rem;
+    color: var(--accent-secondary);
+}
+
+.skills-category span {
+    display: inline-block;
+    background: #30363d;
+    padding: 2px 8px;
+    border-radius: 4px;
+    margin-right: 8px;
+    margin-bottom: 8px;
+    font-size: 0.9rem;
+}
+
+.help-grid {
+    display: grid;
+    gap: 0.5rem;
+}

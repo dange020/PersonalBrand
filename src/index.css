@@ -1,0 +1,70 @@
+:root {
+  --bg-color: #0d1117;
+  --text-color: #c9d1d9;
+  --text-muted: #8b949e;
+  --accent-color: #238636; /* Olive/Tech Green */
+  --accent-hover: #2ea043;
+  --accent-secondary: #58a6ff; /* Tech Blue */
+  --terminal-bg: #161b22;
+  --border-color: #30363d;
+  
+  --font-mono: 'Fira Code', monospace;
+  --font-sans: 'Inter', sans-serif;
+  
+  --line-height: 1.6;
+  --animation-speed: 0.2s;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-sans);
+  line-height: var(--line-height);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  min-height: 100vh;
+}
+
+a {
+  color: var(--accent-secondary);
+  text-decoration: none;
+  transition: color var(--animation-speed);
+}
+
+a:hover {
+  text-decoration: underline;
+  color: var(--accent-hover);
+}
+
+/* Scrollbar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: var(--bg-color);
+}
+::-webkit-scrollbar-thumb {
+  background: var(--border-color);
+  border-radius: 5px;
+  border: 2px solid var(--bg-color);
+}
+::-webkit-scrollbar-thumb:hover {
+  background: var(--text-muted);
+}
+
+/* Utility classes */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.mono {
+  font-family: var(--font-mono);
+}

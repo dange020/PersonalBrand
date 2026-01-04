@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512">
+  <defs>
+    <!-- Dark background for the circle -->
+    <linearGradient id="circleBg" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#24292e"/> <!-- Lighter charcoal for better visibility -->
+      <stop offset="100%" stop-color="#0d1117"/>
+    </linearGradient>
+    
+    <!-- Bright Green Gradient for High Contrast -->
+    <linearGradient id="neonPop" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#4ade80"/> <!-- Very bright green -->
+      <stop offset="100%" stop-color="#22c55e"/>
+    </linearGradient>
+    
+    <!-- Outer Glow to define shape -->
+    <filter id="outerGlow" x="-50%" y="-50%" width="200%" height="200%">
+      <feDropShadow dx="0" dy="0" stdDeviation="10" flood-color="#4ade80" flood-opacity="0.3"/>
+    </filter>
+  </defs>
+
+  <!-- Main Circle Background - Slightly lighter dark to stand out from black tabs -->
+  <circle cx="256" cy="256" r="240" fill="url(#circleBg)" />
+  
+  <!-- Bright Green Ring Border - Crucial for defining the edge -->
+  <circle cx="256" cy="256" r="230" fill="none" stroke="url(#neonPop)" stroke-width="15" />
+
+  <!-- The "PC" Monogram - BIG, BOLD, and BRIGHT -->
+  <g transform="translate(106, 130) scale(1.2)">
+      <!-- P -->
+      <path d="M50 0 L50 140 L85 140 L85 80 L130 80 C160 80 160 0 130 0 Z M85 30 L120 30 C130 30 130 50 120 50 L85 50 Z" 
+            fill="#e6edf3" stroke="none"/> <!-- White/Silver for max readability -->
+      
+      <!-- C -->
+      <path d="M210 140 L160 140 L160 110 L200 110 C210 110 215 120 205 130 Z M160 110 L160 30 L200 30 C210 30 215 20 205 10 L195 0 L160 0 C120 0 110 30 110 70 C110 110 120 140 160 140 L210 140 Z" 
+            fill="#e6edf3" stroke="none" transform="translate(10, 0)"/>
+  </g>
+  
+  <!-- Tech Accents - High Contrast Green -->
+  <circle cx="256" cy="70" r="12" fill="#4ade80"/>
+  <circle cx="256" cy="442" r="12" fill="#4ade80"/>
+  <rect x="65" y="250" width="12" height="12" fill="#4ade80"/>
+  <rect x="435" y="250" width="12" height="12" fill="#4ade80"/>
+  
+  <!-- Connecting Circuit Line (Bright) -->
+  <path d="M180 256 L332 256" stroke="#4ade80" stroke-width="4" opacity="0.6"/>
+
+</svg>
