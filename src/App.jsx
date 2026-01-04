@@ -1,6 +1,7 @@
 import Terminal from './components/Terminal';
 import ProfileImg from './assets/profile.png';
 import { Briefcase, Cpu, Users } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 import './App.css'
 
 function App() {
@@ -44,6 +45,7 @@ function App() {
       <footer className="footer">
         <p>© {new Date().getFullYear()} Pablo Carrasco. Built with React & Coffee.</p>
       </footer>
+      <Analytics />
     </div>
   )
 }
